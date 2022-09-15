@@ -7,26 +7,59 @@
 	xmlns:smartfield="sap.ui.comp.smartfield" class="sapUiSizeCompact">
 	
 
-    <Page id="page3" title="{i18n>MPUserTitle}" showNavButton="true" navButtonPress="GoToLogin" >
-        <content>
-            
-    <html:style>       .mySuperRedButton {          color: red;       }
-   
-    <VBox id="VBox2" fitContainer="true"    
-		alignItems="Center"
-        
-		alignContent="Center">
-        <items>
-    <Button id="Button1" width="12rem" text="Stops" type="Emphasized" press="onTapStop" class="sapUiSmallMarginEnd" />
-    <Button id="Button2" width="12rem" text="Routes" type="Emphasized" press="onTapRoutes" class="sapUiSmallMarginEnd" />
-    <Button id="Button3" width="12rem" text="Connections" type="Emphasized" press="onTapConnections" class="sapUiSmallMarginEnd" />
-    <Button id="Button4" width="12rem" text="Buses" type="Emphasized" press="onTapBuses" class="sapUiSmallMarginEnd" />
-
-	    </items>
-	</VBox>
-
-
-
+    <Page id="page3" title="{i18n>MPUserTitle}" showNavButton="true" navButtonPress="GoToLogin" showHeader="false" enableScrolling="false">
+    <content>
+    <Panel id="Panel1"
+                            headerText="{i18n>titleMainPage}"
+                            class="sapUiResponsiveMargin"
+                            width="auto">
+    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+	             backgroundImage="https://www.pinclipart.com/picdir/big/16-160748_bus-clipart-transparent-background-clipart-red-bus-clipart.png"
+	             frameType="TwoByOne" press="onTapBuses">
+		<TileContent footer="Add or update bus information." frameType="TwoByOne">
+			<NewsContent
+					contentText="Bus Details"
+					
+                    
+                     />
+		</TileContent>
+	</GenericTile>
+    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+	             backgroundImage="https://png.pngtree.com/png-vector/20190716/ourlarge/pngtree-bus-stop-bus-stop-png-image_903896.jpg"
+	             frameType="TwoByOne" press="onTapStop">
+		<TileContent footer="Add or update Stop information." frameType="TwoByOne">
+			<NewsContent
+					contentText="Stop Details"
+					
+                    
+                     />
+		</TileContent>
+	</GenericTile>
+    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+	             backgroundImage="https://www.kindpng.com/picc/m/49-499662_road-clip-art-road-clipart-hd-png-download.png"
+	             frameType="TwoByOne" press="onTapRoutes">
+		<TileContent footer="Add or update Route information." frameType="TwoByOne">
+			<NewsContent
+					contentText="Route Details"
+					
+                    
+                     />
+		</TileContent>
+	</GenericTile>
+    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+	             backgroundImage="https://cdn.britannica.com/19/177619-050-11482EEA/Global-Positioning-System-navigation-map.jpg"
+	             frameType="TwoByOne" press="onTapConnections">
+		<TileContent footer="Add or update Connection information." frameType="TwoByOne">
+        <ImageContent src="sap-icon://home-share" />
+			<NewsContent
+					contentText="Connection Details"
+					
+                    
+                     />
+		</TileContent>
+	</GenericTile>
+        </Panel>
         </content>
     </Page>
+    
 </mvc:View>
